@@ -39,12 +39,17 @@ public class ItemDAO implements Dao<Item>{
 	 */
 
 	@Override
-	public List<Item> readAll() throws SQLException {
-		String query = "SELECT * FROM item;";
+	public List<Item> readAll()  {
+		String query = "SELECT * FROM items;";
 			ResultSet rs = DBInstance.executeQuery(query);
 			List<Item> items = new ArrayList<>();
-			while(rs.next()) {
-				items.add(modelFromResultSet(rs));
+			try {
+				while(rs.next()) {
+					items.add(modelFromResultSet(rs));
+				}
+			} catch (Exception e) {
+				LOGGER.debug(e);
+				LOGGER.error(e.getMessage());
 			}
 			return items;
 	}
@@ -59,13 +64,13 @@ public class ItemDAO implements Dao<Item>{
 	 */
 	@Override
 	public Item create(Item item) {
-		String query = String.format("INSERT INTO item(name, price) VALUES('%s', '%d');", item.getName(), item.getPrice());
+		String query = String.format("INSERT INTO items(name, price) VALUES('%s', '%d');", item.getName(), item.getPrice());
 			DBInstance.executeUpdate(query);
 			return readLatest();
 	}
 	
 	public Item readItem(Long id) throws SQLException {
-		String query = String.format("SELECT * from item WHERE item_id= '%d%;", id);
+		String query = String.format("SELECT * from items WHERE id= '%d%;", id);
 		ResultSet rs = DBInstance.executeQuery(query);
 			rs.next();
 			return modelFromResultSet(rs);
@@ -80,7 +85,7 @@ public class ItemDAO implements Dao<Item>{
 	 */
 	@Override
 	public Item update(Item item) {
-		String query = String.format("UPDATE ITEM SET name='%s', price='%d' where item_id='%d;", item.getName(), item.getPrice(), item.getId());
+		String query = String.format("UPDATE items SET name='%s', price='%d' where id='%d;", item.getName(), item.getPrice(), item.getId());
 			DBInstance.executeUpdate(query);
 			try {
 				return readItem(item.getId());
@@ -98,14 +103,19 @@ public class ItemDAO implements Dao<Item>{
 	 */
 	@Override
 	public int delete(long id) {
-		String query = String.format("DELETE FROM ITEM WHERE item_id = '%d';", id);
+		String query = String.format("DELETE FROM ITEM WHERE id = '%d';", id);
 		DBInstance.executeUpdate(query);
 		return 0;
 	}
-
+	
+	/**
+	 * Converts the Result Set returned from the database into a Item object
+	 * 
+	 * @param - resultSet - table retrieved from database
+	 */
 	@Override
 	public Item modelFromResultSet(ResultSet resultSet) throws SQLException {
-		Long id = resultSet.getLong("item_id");
+		Long id = resultSet.getLong("id");
 		String name = resultSet.getString("name");
 		Long price = resultSet.getLong("price");
 		return new Item(id, name, price);
