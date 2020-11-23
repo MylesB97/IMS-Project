@@ -21,7 +21,7 @@ public class CustomerDAO implements Dao<Customer> {
 	public Customer modelFromResultSet(ResultSet resultSet) throws SQLException {
 		Long id = resultSet.getLong("id");
 		String firstName = resultSet.getString("first_name");
-		String surname = resultSet.getString("surname");
+		String surname = resultSet.getString("last_name");
 		return new Customer(id, firstName, surname);
 	}
 

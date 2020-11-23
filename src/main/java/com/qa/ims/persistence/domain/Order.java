@@ -1,33 +1,41 @@
 package com.qa.ims.persistence.domain;
 
+import java.util.List;
+
 public class Order {
 
 	//Attributes
 	private long id;
 	private long customerID;
-	private long price;
+	private List<Item> items;
 	
+	
+//	private long orderLinesID;
+//	private long itemID;
+//	private long quantity;
+//	private int oldItemID;
+//	private long price;
+//	
 	//Constructors
 	public Order(long customerID) {
 		this.customerID = customerID;
 	}
-	
-	
+
+
 	public Order(long id, long customerID) {
 		super();
 		this.id = id;
 		this.customerID = customerID;
 	}
 
-
-	public Order(long id, long customerID, long price) {
+	public Order(long id, long customerID, List<Item> items) {
 		super();
 		this.id = id;
 		this.customerID = customerID;
-		this.price = price;
+		this.items = items;
 	}
-	
-	
+
+
 	//Getters and Setters
 	public long getId() {
 		return id;
@@ -45,12 +53,15 @@ public class Order {
 		this.customerID = customerID;
 	}
 
-	public long getPrice() {
-		return price;
+
+
+	public List<Item> getItems() {
+		return items;
 	}
 
-	public void setPrice(long price) {
-		this.price = price;
+
+	public void setItems(List<Item> items) {
+		this.items = items;
 	}
 
 	@Override
@@ -66,14 +77,25 @@ public class Order {
 			return false;
 		if (id != other.id)
 			return false;
-		if (price != other.price)
+		if (items == null) {
+			if (other.items != null)
+				return false;
+		} else if (!items.equals(other.items))
 			return false;
 		return true;
 	}
 
+
 	@Override
 	public String toString() {
-		return "Order ID:" + id + "| Customer ID: " + customerID + "| Price: " + price + "|";
+		String nl = "\n";
+		double totalPrice = 0.0;
+		for(Item item: items) {
+			totalPrice += item.getPrice();
+			nl += item.toString() + "\n";
+		}
+		
+		return "Order ID:" + id + "| Customer ID: " + customerID + "| Items: " + nl + "| Total Pricce £" + totalPrice + " |";
 	}
 	
 	

@@ -31,7 +31,7 @@ public class IMS {
 		final OrderDAO orderDAO = new OrderDAO();
 		this.customers = new CustomerController(custDAO, utils);
 		this.items = new ItemController(itemDAO, utils);
-		this.orders = new OrderController(orderDAO, utils);
+		this.orders = new OrderController(orderDAO, utils, itemDAO);
 	}
 
 	public void imsSystem() {
@@ -61,8 +61,6 @@ public class IMS {
 				case ORDER:
 					active = this.orders;
 					break;
-				case ORDERLINE:
-					active = null;
 				case STOP:
 					return;
 				default:

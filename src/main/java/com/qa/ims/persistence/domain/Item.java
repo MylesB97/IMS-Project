@@ -5,13 +5,22 @@ public class Item {
 	
 	private long id;
 	private String name;
+	private long quantity;
 	private long price;
 	
 	//Constructors
+	
+	
 	public Item(String name, long price) {
 		super();
 		this.name = name;
 		this.price = price;
+	}
+
+	public Item(long id, long quantity) {
+		super();
+		this.id = id;
+		this.quantity = quantity;
 	}
 
 	public Item(long id, String name, long price) {
@@ -21,13 +30,21 @@ public class Item {
 		this.price = price;
 	}
 	
+	public Item(long id, String name, long quantity, long price) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.quantity = quantity;
+		this.price = price;
+	}
+
 	//Getters and Setters
 	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setId(Long itemID) {
+		this.id = itemID;
 	}
 
 	public String getName() {
@@ -44,6 +61,14 @@ public class Item {
 
 	public void setPrice(long price) {
 		this.price = price;
+	}
+
+	public long getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(long quantity) {
+		this.quantity = quantity;
 	}
 
 	@Override

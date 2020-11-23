@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.stream.Stream;
@@ -20,14 +19,23 @@ public class DBUtils {
 
 	private final String DB_PASS;
 
-	private final String DB_URL = "jdbc:mysql://35.234.147.106/ims?db_name&serverTimezone=UTC";
+	private final String DB_URL;
 
 	private DBUtils(String username, String password) {
 		this.DB_USER = username;
 		this.DB_PASS = password;
+		this.DB_URL = "jdbc:mysql://35.234.147.106/ims?db_name&serverTimezone=UTC";
+		init();
+	}
+	
+	private DBUtils(String username, String password, String test) {
+		this.DB_USER = username;
+		this.DB_PASS = password;
+		this.DB_URL = "jdbc:mysql://35.234.147.106/"+test+"?db_name&serverTimezone=UTC";
 
 		init();
 	}
+
 
 	public int init() {
 		return this.init("src/main/resources/sql-schema.sql", "src/main/resources/sql-data.sql");
@@ -73,6 +81,11 @@ public class DBUtils {
 		instance = new DBUtils(username, password);
 		return instance;
 	}
+	
+	public static DBUtils connect(String username, String password, String test) {
+		instance = new DBUtils(username, password, test);
+		return instance;
+	}
 
 	public static DBUtils getInstance() {
 		if (instance == null) {
@@ -81,36 +94,4 @@ public class DBUtils {
 		return instance;
 	}
 	
-	//Query Handlers
-	//Insertion, Updating & Deletion Queries
-		public void executeUpdate(String query) {
-			Connection con;
-			Statement stmt;
-			try {
-				con = getConnection();
-				stmt = con.createStatement();
-				stmt.executeUpdate(query);
-			} catch (SQLException e) {
-				LOGGER.debug(e);
-				LOGGER.error(e.getMessage());
-			}
-		}
-		
-		//Reading Queries
-		public ResultSet executeQuery(String query){
-			Connection con;
-			Statement stmt;
-			ResultSet rs;
-			try {
-				con = getConnection();
-				stmt = con.createStatement();
-				rs = stmt.executeQuery(query);
-				return rs;
-			} catch (SQLException e) {
-				LOGGER.debug(e);
-				LOGGER.error(e.getMessage());
-			}
-			return null;
-		}
-
 }
