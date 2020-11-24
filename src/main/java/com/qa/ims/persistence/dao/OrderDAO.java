@@ -19,7 +19,11 @@ public class OrderDAO implements Dao<Order> {
 	//Attributes
 	public static final Logger LOGGER = LogManager.getLogger();
 	
-	private ItemDAO itemDAO = new ItemDAO();
+	private ItemDAO itemDAO;
+	
+	public OrderDAO(ItemDAO itemDAO) {
+		this.itemDAO = itemDAO;
+	}
 
 	/*
 	 * Read the latest order entry into the database
@@ -55,7 +59,7 @@ public class OrderDAO implements Dao<Order> {
 		return new ArrayList<>();
 	}
 	
-	public Order readOrder(Long id) throws SQLException {
+	public Order readOrder(Long id) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				Statement statement = connection.createStatement();
 				ResultSet resultSet = statement.executeQuery("SELECT * FROM orders where id = " + id);) {

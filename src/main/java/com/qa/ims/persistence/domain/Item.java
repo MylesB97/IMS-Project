@@ -5,7 +5,6 @@ public class Item {
 	
 	private long id;
 	private String name;
-	private long quantity;
 	private long price;
 	
 	//Constructors
@@ -17,11 +16,7 @@ public class Item {
 		this.price = price;
 	}
 
-	public Item(long id, long quantity) {
-		super();
-		this.id = id;
-		this.quantity = quantity;
-	}
+
 
 	public Item(long id, String name, long price) {
 		super();
@@ -30,52 +25,26 @@ public class Item {
 		this.price = price;
 	}
 	
-	public Item(long id, String name, long quantity, long price) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.quantity = quantity;
-		this.price = price;
-	}
 
 	//Getters and Setters
 	public long getId() {
 		return id;
 	}
 
-	public void setId(Long itemID) {
-		this.id = itemID;
-	}
 
 	public String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public long getPrice() {
 		return price;
 	}
 
-	public void setPrice(long price) {
-		this.price = price;
-	}
-
-	public long getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(long quantity) {
-		this.quantity = quantity;
-	}
-
 	@Override
 	public String toString() {
-		return "Item - ID: " + id + "| Name: " + name + "| Price: £" + price + "|";
+		return "Item - ID: " + id + "| Name: " + name + "| Price: £" + price + "|\n";
 	}
-
 	
 	@Override
 	public boolean equals(Object obj) {

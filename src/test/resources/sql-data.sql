@@ -10,3 +10,5 @@ INSERT INTO `testims`.`items` (`name`, `price`) VALUES ('Call of Duty: Black Ops
 INSERT INTO `testims`.`items` (`name`, `price`) VALUES ('PlayStation 5', 459);
 
 INSERT INTO `testims`.`orders`(`customer_id`) VALUES(1);
+
+INSERT INTO `testims`.`order_line`(`order_id`, `item_id`) VALUES(1,2);

@@ -13,13 +13,13 @@ import com.qa.ims.persistence.domain.Item;
 import com.qa.ims.persistence.domain.Order;
 import com.qa.ims.utils.DBUtils;
 
-public class OrderDAOTest {
+public class OrderDAOFail {
 	private final ItemDAO iDAO = new ItemDAO();
 	private final OrderDAO DAO = new OrderDAO(iDAO);
 
 	@BeforeClass
 	public static void init() {
-		DBUtils.connect("root", "root", "testims");
+		DBUtils.connect("root", "fail", "testims");
 	}
 
 	@Before

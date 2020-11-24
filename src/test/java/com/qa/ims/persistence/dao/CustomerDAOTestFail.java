@@ -12,13 +12,12 @@ import org.junit.Test;
 import com.qa.ims.persistence.domain.Customer;
 import com.qa.ims.utils.DBUtils;
 
-public class CustomerDAOTest {
-
+public class CustomerDAOTestFail {
 	private final CustomerDAO DAO = new CustomerDAO();
-
+	
 	@BeforeClass
 	public static void init() {
-		DBUtils.connect("root", "root", "testims");
+		DBUtils.connect("root", "fail", "testims");
 	}
 
 	@Before
@@ -67,3 +66,4 @@ public class CustomerDAOTest {
 		assertEquals(1, DAO.delete(6));
 	}
 }
+

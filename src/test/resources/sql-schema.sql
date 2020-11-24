@@ -27,7 +27,6 @@ CREATE TABLE IF NOT EXISTS `testims`.`order_line` (
 	`id` smallint(5) NOT NULL AUTO_INCREMENT,
     `item_id` smallint NOT NULL,
     `order_id` smallint NOT NULL,
-    `quantity` smallint(5) NOT NULL DEFAULT 1,
     PRIMARY KEY(`id`),
     CONSTRAINT `fk_items_id` FOREIGN KEY(`item_id`) REFERENCES `testims`.`items`(`id`),
     CONSTRAINT `fk_order_id` FOREIGN KEY(`order_id`) REFERENCES `testims`.`orders`(`id`)

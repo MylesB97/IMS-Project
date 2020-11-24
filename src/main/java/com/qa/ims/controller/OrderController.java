@@ -16,13 +16,13 @@ public class OrderController implements CrudController<Order> {
 	
 	private OrderDAO orderDAO;
 	private Utils utils;
-	private final ItemDAO itemDAO;
+	private ItemDAO itemDAO;
 		
 	public OrderController(OrderDAO orderDAO, Utils utils, ItemDAO itemDAO) {
 		super();
 		this.orderDAO = orderDAO;
-		this.itemDAO = itemDAO;
 		this.utils = utils;
+		this.itemDAO = itemDAO;
 	}
 
 	@Override
@@ -47,45 +47,71 @@ public class OrderController implements CrudController<Order> {
 
 	@Override
 	public Order update() {
-		LOGGER.info("Would you like to (1) Change Order Owner or (2) Add item to order");
-		String choice = utils.getString();
-		switch(choice) {
-		case "1":
-			LOGGER.info("Please enter the ID of the order you would like to update");
-			Long id = utils.getLong();
-			LOGGER.info("Please enter the new Customer ID");
-			Long customerID = utils.getLong();
-			Order order = orderDAO.update(new Order(id, customerID));
-			LOGGER.info("Item Updated");
-			return order;
-		case "2":
-			itemDAO.readAll();
-			LOGGER.info("Please enter the Order ID");
-			Long orderID = utils.getLong();
-			LOGGER.info("Please enter the Item ID");
-			Long itemID = utils.getLong();
-			Order itemOrder = orderDAO.createLine(orderID, itemID);
-			return itemOrder;
+		Order order;
+		Long id = null;
+		Long itemID;
+		boolean flag = true;
+		while(flag) {
+			LOGGER.info("Would you like to:\n(1) Change Order Owner \n(2) Add item to order \n(3) Return to CRUD Menu");
+			String choice = utils.getString();
+			switch(choice) {
+			case "1":
+				LOGGER.info("Please enter the ID of the order you would like to update");
+				id = utils.getLong();
+				LOGGER.info("Please enter the new Customer ID");
+				Long customerID = utils.getLong();
+				orderDAO.update(new Order(id, customerID));
+				LOGGER.info("Item Updated");
+				break;
+			case "2":
+				itemDAO.readAll();
+				LOGGER.info("Please enter the Order ID");
+				id = utils.getLong();
+				LOGGER.info("Please enter the Item ID");
+				itemID = utils.getLong();
+				orderDAO.createLine(id, itemID);
+				break;
+			case "3":
+				LOGGER.info("Returning to CRUD \n\n\n");
+				flag = false;
+				order = orderDAO.readOrder(id);
+				return order;
+			}
 		}
 		return null;
 	}
 
 	@Override
 	public int delete() {
-		LOGGER.info("Would you like to (1) Remove an item from an order or (2) Delete an Entire Order");
-		String choice = utils.getString();
-		switch(choice) {
-		case "1":
-			LOGGER.info("Please enter the ID of the order you would Change");
-			Long id = utils.getLong();
-			LOGGER.info(orderDAO.readLines(id));
-			LOGGER.info("Please enter the id of the item you would like to delete");
-			Long itemID = utils.getLong();
-			return orderDAO.removeItem(id, itemID);
-		case "2":
-			LOGGER.info("Please enter the ID of the order you would like to delete");
-			Long orderID = utils.getLong();
-			return orderDAO.delete(orderID);
+		Integer removeItem = null;
+		Integer deleteOrder = null;
+		boolean flag = true;
+		while (flag) {
+			LOGGER.info("Would you like to:\n(1) Remove an item from an order \n(2) Delete an Entire Order \n(3) Return to CRUD Menu");
+			String choice = utils.getString();
+			switch(choice) {
+			case "1":
+				LOGGER.info("Please enter the ID of the order you would Change");
+				Long id = utils.getLong();
+				LOGGER.info(orderDAO.readLines(id));
+				LOGGER.info("Please enter the id of the item you would like to delete");
+				Long itemID = utils.getLong();
+				removeItem = orderDAO.removeItem(id, itemID);
+			case "2":
+				LOGGER.info("Please enter the ID of the order you would like to delete");
+				Long orderID = utils.getLong();
+				deleteOrder = orderDAO.delete(orderID);
+			case "3":
+				LOGGER.info("Returning to CRUD \n\n\n");
+				flag = false;
+				if(removeItem != null && deleteOrder == null) {
+					return removeItem;
+				} else if (deleteOrder != null && removeItem == null) {
+					return deleteOrder;
+				} else {
+					return removeItem + deleteOrder;
+				}			
+			}
 		}
 		return 0;
 	}
