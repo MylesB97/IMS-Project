@@ -30,7 +30,7 @@ JDK Version 14.0.2" YYYY-MM--DD
 2. Git Clone https://github.com/MylesBrathQA/QAProjectOne_IMS.git
 
 ```
-git Clone https://github.com/MylesBrathQA/QAProjectOne_IMS.git
+git clone https://github.com/MylesBrathQA/QAProjectOne_IMS.git
 ```
 3. Open Existing Maven Project in IDE of your choice.
 
