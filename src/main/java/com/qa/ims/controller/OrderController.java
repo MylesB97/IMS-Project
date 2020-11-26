@@ -39,7 +39,7 @@ public class OrderController implements CrudController<Order> {
 			LOGGER.info("Please enter the Customer ID");
 			Long customerID = utils.getLong();
 			Order order = orderDAO.create(new Order(customerID));
-			LOGGER.info("Order created");
+			LOGGER.info("Order created\n\n");
 			return order;
 	}
 		
@@ -72,7 +72,7 @@ public class OrderController implements CrudController<Order> {
 				orderDAO.createLine(id, itemID);
 				break;
 			case "3":
-				LOGGER.info("Returning to CRUD \n\n\n");
+				LOGGER.info("Returning to CRUD \n\n");
 				flag = false;
 				order = orderDAO.readOrder(id);
 				return order;
@@ -97,12 +97,14 @@ public class OrderController implements CrudController<Order> {
 				LOGGER.info("Please enter the id of the item you would like to delete");
 				Long itemID = utils.getLong();
 				removeItem = orderDAO.removeItem(id, itemID);
+				break;
 			case "2":
 				LOGGER.info("Please enter the ID of the order you would like to delete");
 				Long orderID = utils.getLong();
 				deleteOrder = orderDAO.delete(orderID);
+				break;
 			case "3":
-				LOGGER.info("Returning to CRUD \n\n\n");
+				LOGGER.info("Returning to CRUD \n\n");
 				flag = false;
 				if(removeItem != null && deleteOrder == null) {
 					return removeItem;

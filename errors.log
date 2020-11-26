@@ -1,164 +1,129 @@
-20201124 17:28:34 INFO  [main] ims.IMS IMS.java38 - What is your username
-20201124 17:28:38 INFO  [main] ims.IMS IMS.java40 - What is your password
-20201124 17:28:41 DEBUG [main] utils.DBUtils DBUtils.java64 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
-20201124 17:28:41 INFO  [main] ims.IMS IMS.java46 - Which entity would you like to use?
-20201124 17:28:41 INFO  [main] domain.Domain Domain.java26 - CUSTOMER: Information about customers
-20201124 17:28:41 INFO  [main] domain.Domain Domain.java26 - ITEM: Individual Items
-20201124 17:28:41 INFO  [main] domain.Domain Domain.java26 - ORDER: Purchases of items
-20201124 17:28:41 INFO  [main] domain.Domain Domain.java26 - STOP: To close the application
-20201124 17:28:46 INFO  [main] ims.IMS IMS.java70 - What would you like to do with customer:
-20201124 17:28:46 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 17:28:46 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 17:28:46 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 17:28:46 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 17:28:46 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 17:28:50 INFO  [main] controller.CustomerController CustomerController.java46 - Please enter a first name
-20201124 17:28:54 INFO  [main] controller.CustomerController CustomerController.java48 - Please enter a surname
-20201124 17:28:57 INFO  [main] controller.CustomerController CustomerController.java51 - Customer created
-20201124 17:28:57 INFO  [main] ims.IMS IMS.java70 - What would you like to do with customer:
-20201124 17:28:57 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 17:28:57 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 17:28:57 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 17:28:57 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 17:28:57 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 17:29:08 INFO  [main] controller.CustomerController CustomerController.java36 - id:1 first name:jordan surname:harrison
-20201124 17:29:08 INFO  [main] controller.CustomerController CustomerController.java36 - id:2 first name:john surname:doe
-20201124 17:29:08 INFO  [main] controller.CustomerController CustomerController.java36 - id:3 first name:jane surname:doe
-20201124 17:29:08 INFO  [main] controller.CustomerController CustomerController.java36 - id:4 first name:peter surname:parker
-20201124 17:29:08 INFO  [main] controller.CustomerController CustomerController.java36 - id:5 first name:mary surname:jane
-20201124 17:29:08 INFO  [main] controller.CustomerController CustomerController.java36 - id:6 first name:miles surname:morales
-20201124 17:29:08 INFO  [main] controller.CustomerController CustomerController.java36 - id:7 first name:Myles surname:Brathwaite
-20201124 17:29:08 INFO  [main] ims.IMS IMS.java70 - What would you like to do with customer:
-20201124 17:29:08 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 17:29:08 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 17:29:08 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 17:29:08 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 17:29:08 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 17:29:15 INFO  [main] controller.CustomerController CustomerController.java78 - Please enter the id of the customer you would like to delete
-20201124 17:29:40 INFO  [main] ims.IMS IMS.java70 - What would you like to do with customer:
-20201124 17:29:40 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 17:29:40 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 17:29:40 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 17:29:40 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 17:29:40 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 17:30:10 INFO  [main] controller.CustomerController CustomerController.java60 - Please enter the id of the customer you would like to update
-20201124 17:30:12 INFO  [main] controller.CustomerController CustomerController.java62 - Please enter a first name
-20201124 17:30:15 INFO  [main] controller.CustomerController CustomerController.java64 - Please enter a surname
-20201124 17:30:21 INFO  [main] controller.CustomerController CustomerController.java67 - Customer Updated
-20201124 17:30:21 INFO  [main] ims.IMS IMS.java70 - What would you like to do with customer:
-20201124 17:30:21 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 17:30:21 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 17:30:21 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 17:30:21 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 17:30:21 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 17:30:25 INFO  [main] ims.IMS IMS.java46 - Which entity would you like to use?
-20201124 17:30:25 INFO  [main] domain.Domain Domain.java26 - CUSTOMER: Information about customers
-20201124 17:30:25 INFO  [main] domain.Domain Domain.java26 - ITEM: Individual Items
-20201124 17:30:25 INFO  [main] domain.Domain Domain.java26 - ORDER: Purchases of items
-20201124 17:30:25 INFO  [main] domain.Domain Domain.java26 - STOP: To close the application
-20201124 17:30:28 INFO  [main] ims.IMS IMS.java70 - What would you like to do with item:
-20201124 17:30:28 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 17:30:28 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 17:30:28 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 17:30:28 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 17:30:28 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 17:30:33 INFO  [main] controller.ItemController ItemController.java51 - Please enter item name
-20201124 17:30:44 INFO  [main] controller.ItemController ItemController.java53 - Please enter item price
-20201124 17:30:49 INFO  [main] controller.ItemController ItemController.java56 - Item Created
-20201124 17:30:49 INFO  [main] ims.IMS IMS.java70 - What would you like to do with item:
-20201124 17:30:49 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 17:30:49 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 17:30:49 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 17:30:49 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 17:30:49 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 17:30:53 INFO  [main] controller.ItemController ItemController.java38 - Item - ID: 1| Name: Spider-Man: Miles Morales| Price: £40|
+20201126 16:02:02 INFO  [main] controller.CustomerController CustomerController.java36 - ID:1 | First Name: jordan | Surname: harrison |
+20201126 16:02:02 INFO  [main] controller.CustomerController CustomerController.java46 - Please enter a first name
+20201126 16:02:02 INFO  [main] controller.CustomerController CustomerController.java48 - Please enter a surname
+20201126 16:02:02 INFO  [main] controller.CustomerController CustomerController.java51 - Customer created 
 
-20201124 17:30:53 INFO  [main] controller.ItemController ItemController.java38 - Item - ID: 2| Name: Call of Duty: Black Ops| Price: £50|
 
-20201124 17:30:53 INFO  [main] controller.ItemController ItemController.java38 - Item - ID: 3| Name: PlayStation 5| Price: £459|
+20201126 16:02:02 INFO  [main] controller.CustomerController CustomerController.java78 - Please enter the id of the customer you would like to delete
 
-20201124 17:30:53 INFO  [main] controller.ItemController ItemController.java38 - Item - ID: 4| Name: Kingdom Hearts 2.8| Price: £13|
 
-20201124 17:30:53 INFO  [main] ims.IMS IMS.java70 - What would you like to do with item:
-20201124 17:30:53 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 17:30:53 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 17:30:53 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 17:30:53 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 17:30:53 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 17:31:16 INFO  [main] controller.ItemController ItemController.java86 - Please enter the id of the item you would like to delete
-20201124 17:31:19 INFO  [main] ims.IMS IMS.java70 - What would you like to do with item:
-20201124 17:31:19 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 17:31:19 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 17:31:19 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 17:31:19 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 17:31:19 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 17:31:24 INFO  [main] ims.IMS IMS.java46 - Which entity would you like to use?
-20201124 17:31:24 INFO  [main] domain.Domain Domain.java26 - CUSTOMER: Information about customers
-20201124 17:31:24 INFO  [main] domain.Domain Domain.java26 - ITEM: Individual Items
-20201124 17:31:24 INFO  [main] domain.Domain Domain.java26 - ORDER: Purchases of items
-20201124 17:31:24 INFO  [main] domain.Domain Domain.java26 - STOP: To close the application
-20201124 17:31:27 INFO  [main] ims.IMS IMS.java70 - What would you like to do with order:
-20201124 17:31:27 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 17:31:27 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 17:31:27 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 17:31:27 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 17:31:27 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 17:31:30 INFO  [main] ims.IMS IMS.java70 - What would you like to do with order:
-20201124 17:31:30 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 17:31:30 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 17:31:30 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 17:31:30 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 17:31:30 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 17:31:37 INFO  [main] controller.OrderController OrderController.java39 - Please enter the Customer ID
-20201124 17:31:39 INFO  [main] controller.OrderController OrderController.java42 - Order created
-20201124 17:31:39 INFO  [main] ims.IMS IMS.java70 - What would you like to do with order:
-20201124 17:31:39 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 17:31:39 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 17:31:39 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 17:31:39 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 17:31:39 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 17:31:43 INFO  [main] controller.OrderController OrderController.java32 - Order ID:1| Customer ID: 6| Items: 
-| Total Pricce £0.0 |
-20201124 17:31:43 INFO  [main] ims.IMS IMS.java70 - What would you like to do with order:
-20201124 17:31:43 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 17:31:43 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 17:31:43 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 17:31:43 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 17:31:43 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 17:31:47 INFO  [main] controller.OrderController OrderController.java55 - Would you like to:
+20201126 16:02:02 INFO  [main] controller.CustomerController CustomerController.java60 - Please enter the id of the customer you would like to update
+20201126 16:02:02 INFO  [main] controller.CustomerController CustomerController.java62 - Please enter a first name
+20201126 16:02:02 INFO  [main] controller.CustomerController CustomerController.java64 - Please enter a surname
+20201126 16:02:02 INFO  [main] controller.CustomerController CustomerController.java67 - Customer Updated
+
+
+20201126 16:02:02 INFO  [main] controller.ItemController ItemController.java38 - Item - ID: 1| Name: Test Item| Price: £50|
+
+20201126 16:02:02 INFO  [main] controller.ItemController ItemController.java51 - Please enter item name
+20201126 16:02:02 INFO  [main] controller.ItemController ItemController.java53 - Please enter item price
+20201126 16:02:02 INFO  [main] controller.ItemController ItemController.java56 - Item Created
+
+
+20201126 16:02:02 INFO  [main] controller.ItemController ItemController.java86 - Please enter the id of the item you would like to delete
+
+
+20201126 16:02:02 INFO  [main] controller.ItemController ItemController.java67 - Please enter the id of the item you would like to update
+20201126 16:02:02 INFO  [main] controller.ItemController ItemController.java69 - Please enter the item name
+20201126 16:02:02 INFO  [main] controller.ItemController ItemController.java71 - Please enter item price
+20201126 16:02:02 INFO  [main] controller.ItemController ItemController.java74 - Item Updated
+
+
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java90 - Would you like to:
+(1) Remove an item from an order 
+(2) Delete an Entire Order 
+(3) Return to CRUD Menu
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java94 - Please enter the ID of the order you would Change
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java96 - []
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java97 - Please enter the id of the item you would like to delete
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java90 - Would you like to:
+(1) Remove an item from an order 
+(2) Delete an Entire Order 
+(3) Return to CRUD Menu
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java102 - Please enter the ID of the order you would like to delete
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java90 - Would you like to:
+(1) Remove an item from an order 
+(2) Delete an Entire Order 
+(3) Return to CRUD Menu
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java107 - Returning to CRUD 
+
+
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java55 - Would you like to:
 (1) Change Order Owner 
 (2) Add item to order 
 (3) Return to CRUD Menu
-20201124 17:31:51 INFO  [main] controller.OrderController OrderController.java68 - Please enter the Order ID
-20201124 17:31:54 INFO  [main] controller.OrderController OrderController.java70 - Please enter the Item ID
-20201124 17:31:58 INFO  [main] controller.OrderController OrderController.java55 - Would you like to:
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java59 - Please enter the ID of the order you would like to update
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java61 - Please enter the new Customer ID
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java64 - Item Updated
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java55 - Would you like to:
 (1) Change Order Owner 
 (2) Add item to order 
 (3) Return to CRUD Menu
-20201124 17:32:03 INFO  [main] controller.OrderController OrderController.java75 - Returning to CRUD 
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java68 - Please enter the Order ID
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java70 - Please enter the Item ID
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java55 - Would you like to:
+(1) Change Order Owner 
+(2) Add item to order 
+(3) Return to CRUD Menu
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java75 - Returning to CRUD 
 
 
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java55 - Would you like to:
+(1) Change Order Owner 
+(2) Add item to order 
+(3) Return to CRUD Menu
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java59 - Please enter the ID of the order you would like to update
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java61 - Please enter the new Customer ID
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java64 - Item Updated
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java55 - Would you like to:
+(1) Change Order Owner 
+(2) Add item to order 
+(3) Return to CRUD Menu
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java68 - Please enter the Order ID
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java70 - Please enter the Item ID
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java55 - Would you like to:
+(1) Change Order Owner 
+(2) Add item to order 
+(3) Return to CRUD Menu
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java75 - Returning to CRUD 
 
-20201124 17:32:04 INFO  [main] ims.IMS IMS.java70 - What would you like to do with order:
-20201124 17:32:04 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 17:32:04 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 17:32:04 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 17:32:04 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 17:32:04 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 17:32:16 ERROR [main] controller.Action Action.java54 - Invalid selection please try again
-20201124 17:32:21 INFO  [main] controller.OrderController OrderController.java32 - Order ID:1| Customer ID: 6| Items: 
-Item - ID: 3| Name: PlayStation 5| Price: £459|
 
-| Total Pricce £459.0 |
-20201124 17:32:21 INFO  [main] ims.IMS IMS.java70 - What would you like to do with order:
-20201124 17:32:21 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 17:32:21 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 17:32:21 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 17:32:21 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 17:32:21 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 17:32:28 INFO  [main] ims.IMS IMS.java46 - Which entity would you like to use?
-20201124 17:32:28 INFO  [main] domain.Domain Domain.java26 - CUSTOMER: Information about customers
-20201124 17:32:28 INFO  [main] domain.Domain Domain.java26 - ITEM: Individual Items
-20201124 17:32:28 INFO  [main] domain.Domain Domain.java26 - ORDER: Purchases of items
-20201124 17:32:28 INFO  [main] domain.Domain Domain.java26 - STOP: To close the application
-20201124 17:32:30 INFO  [main] ims.Runner Runner.java13 - SO LONG!
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java90 - Would you like to:
+(1) Remove an item from an order 
+(2) Delete an Entire Order 
+(3) Return to CRUD Menu
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java94 - Please enter the ID of the order you would Change
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java96 - []
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java97 - Please enter the id of the item you would like to delete
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java90 - Would you like to:
+(1) Remove an item from an order 
+(2) Delete an Entire Order 
+(3) Return to CRUD Menu
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java107 - Returning to CRUD 
+
+
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java90 - Would you like to:
+(1) Remove an item from an order 
+(2) Delete an Entire Order 
+(3) Return to CRUD Menu
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java102 - Please enter the ID of the order you would like to delete
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java90 - Would you like to:
+(1) Remove an item from an order 
+(2) Delete an Entire Order 
+(3) Return to CRUD Menu
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java107 - Returning to CRUD 
+
+
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java32 - Order ID:1| Customer ID: 1| Items: 
+Item - ID: 1| Name: Added Item| Price: £60|
+
+| Total Pricce £60.0 |
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java39 - Please enter the Customer ID
+20201126 16:02:03 INFO  [main] controller.OrderController OrderController.java42 - Order created
+
+
+20201126 16:02:05 DEBUG [main] utils.DBUtils DBUtils.java64 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+20201126 16:02:13 DEBUG [main] utils.DBUtils DBUtils.java64 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+20201126 16:02:20 DEBUG [main] utils.DBUtils DBUtils.java64 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+20201126 16:02:30 DEBUG [main] dao.OrderDAO OrderDAO.java149 - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`testims`.`order_line`, CONSTRAINT `fk_order_id` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`))
+20201126 16:02:30 ERROR [main] dao.OrderDAO OrderDAO.java150 - Cannot delete or update a parent row: a foreign key constraint fails (`testims`.`order_line`, CONSTRAINT `fk_order_id` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`))

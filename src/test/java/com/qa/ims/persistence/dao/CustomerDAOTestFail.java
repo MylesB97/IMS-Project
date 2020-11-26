@@ -28,7 +28,7 @@ public class CustomerDAOTestFail {
 	@Test
 	public void testCreate() {
 		final Customer created = new Customer(7L, "chris", "perrins");
-		assertEquals(created, DAO.create(created));
+		assertEquals(null, DAO.create(created));
 	}
 
 	@Test
@@ -40,30 +40,30 @@ public class CustomerDAOTestFail {
 		expected.add(new Customer(4L, "peter", "parker"));
 		expected.add(new Customer(5L, "mary", "jane"));
 		expected.add(new Customer(6L, "miles", "morales"));
-		assertEquals(expected, DAO.readAll());
+		assertEquals(new ArrayList<>(), DAO.readAll());
 	}
 
 	@Test
 	public void testReadLatest() {
-		assertEquals(new Customer(6L, "miles", "morales"), DAO.readLatest());
+		assertEquals(null, DAO.readLatest());
 	}
 
 	@Test
 	public void testRead() {
 		final long ID = 1L;
-		assertEquals(new Customer(ID, "jordan", "harrison"), DAO.readCustomer(ID));
+		assertEquals(null, DAO.readCustomer(ID));
 	}
 
 	@Test
 	public void testUpdate() {
 		final Customer updated = new Customer(2L, "chris", "perrins");
-		assertEquals(updated, DAO.update(updated));
+		assertEquals(null, DAO.update(updated));
 
 	}
 
 	@Test
 	public void testDelete() {
-		assertEquals(1, DAO.delete(6));
+		assertEquals(0, DAO.delete(6));
 	}
 }
 

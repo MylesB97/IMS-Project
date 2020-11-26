@@ -3,7 +3,6 @@ package com.qa.ims.persistence.dao;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -28,37 +27,29 @@ public class ItemDAOTestFail {
 	@Test
 	public void testCreate() {
 	Item created = new Item("Test Item", 29l);
-	Item expected = new Item(4L, "Test Item", 29l);
 	
-	assertEquals(expected, itemDAO.create(created));
+	assertEquals(null, itemDAO.create(created));
 	}
 	
 	@Test
 	public void testReadAll() {
-		List<Item> expected = new ArrayList<>();
-		expected.add(new Item(1l,"Spider-Man: Miles Morales", 40l));
-		expected.add(new Item(2l, "Call of Duty: Black Ops", 50l));
-		expected.add(new Item(3l, "PlayStation 5", 459l));
-		
-		assertEquals(expected, itemDAO.readAll());
+		assertEquals(new ArrayList<>(), itemDAO.readAll());
 	}
 	
 	@Test
 	public void testReadLatest() {
-		Item expected = new Item(3l, "PlayStation 5", 459l);
-		
-		assertEquals(expected, itemDAO.readLatest());
+		assertEquals(null, itemDAO.readLatest());
 	}
 	
 	@Test
 	public void testUpdate() {
 		Item expected = new Item(1l, "Test", 20l);
 		
-		assertEquals(expected, itemDAO.update(expected));
+		assertEquals(null, itemDAO.update(expected));
 	}
 	
 	@Test
 	public void testDelete() {
-		assertEquals(1, itemDAO.delete(1));
+		assertEquals(0, itemDAO.delete(1));
 	}
 }

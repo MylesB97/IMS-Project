@@ -30,8 +30,7 @@ public class OrderDAOFail {
 	@Test
 	public void testCreate() {
 		final Order order = new Order(1L);
-		final Order expected = new Order(2l, 1l);
-		assertEquals(expected, DAO.create(order));
+		assertEquals(null, DAO.create(order));
 	}
 	
 	
@@ -44,15 +43,14 @@ public class OrderDAOFail {
 		expected.add(new Order(2l, 1l));
 		
 		DAO.create(new Order(2l, 1l));
-		assertEquals(expected, DAO.readAll());
+		assertEquals(new ArrayList<>(), DAO.readAll());
 	}
 	
 	@Test
 	public void testReadLatest() {
 		List<Item> items = new ArrayList<>();
 		items.add(new Item(2l ,"Call of Duty: Black Ops", 50l));
-		Order expected = new Order(1l, 1l, items);
-		assertEquals(expected, DAO.readLatest());
+		assertEquals(null, DAO.readLatest());
 	}
 	
 	@Test
@@ -60,13 +58,12 @@ public class OrderDAOFail {
 		Order update = new Order(1l, 3l);
 		List<Item> items = new ArrayList<>();
 		items.add(new Item(2l ,"Call of Duty: Black Ops", 50l));
-		Order expected = new Order(1l, 3l, items);
-		assertEquals(expected, DAO.update(update));
+		assertEquals(null, DAO.update(update));
 	}
 	
 	@Test
 	public void testDelete() {
-		assertEquals(1, DAO.delete(1));
+		assertEquals(0, DAO.delete(1));
 	}
 	
 	@Test
@@ -81,6 +78,6 @@ public class OrderDAOFail {
 		items.add(new Item(3l, "PlayStation 5", 459l));	
 		Order expected = new Order(1l, 1l, items);
 		
-		assertEquals(expected, DAO.createLine(expected.getId(), 3l));
+		assertEquals(null, DAO.createLine(expected.getId(), 3l));
 	}
 }

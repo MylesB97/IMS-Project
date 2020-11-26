@@ -51,7 +51,8 @@ public class OrderControllerTest {
 	@Test
 	public void testReadAll() {
 		List<Order> orders = new ArrayList<>();
-		List<Item> items = new ArrayList<>(); 
+		List<Item> items = new ArrayList<>();
+		items.add(new Item(1l, "Added Item", 60l));
 		orders.add(new Order(1l, 1l, items));
 		
 		Mockito.when(dao.readAll()).thenReturn(orders);
@@ -93,6 +94,11 @@ public class OrderControllerTest {
 		
 		
 		Mockito.verify(utils, Mockito.times(3)).getString();
+		Mockito.verify(utils, Mockito.times(4)).getLong();
+		Mockito.verify(dao, Mockito.times(1)).update(expected);
+		Mockito.verify(iDAO, Mockito.times(1)).readAll();
+		Mockito.verify(dao, Mockito.times(1)).createLine(id, id);
+		Mockito.verify(dao, Mockito.times(1)).readOrder(id);
 	}
 	
 	/*
@@ -127,6 +133,11 @@ public class OrderControllerTest {
 		
 		
 		Mockito.verify(utils, Mockito.times(3)).getString();
+		Mockito.verify(utils, Mockito.times(4)).getLong();
+		Mockito.verify(dao, Mockito.times(1)).update(expected);
+		Mockito.verify(iDAO, Mockito.times(1)).readAll();
+		Mockito.verify(dao, Mockito.times(1)).createLine(id, id);
+		Mockito.verify(dao, Mockito.times(1)).readOrder(id);
 	}
 	
 	
@@ -140,5 +151,51 @@ public class OrderControllerTest {
 		Mockito.when(dao.removeItem(id, id)).thenReturn(1);
 		
 		assertEquals(1, controller.delete());
+		
+		Mockito.verify(utils, Mockito.times(2)).getString();
+		Mockito.verify(utils, Mockito.times(2)).getLong();
+		Mockito.verify(dao, Mockito.times(1)).removeItem(id, id);
 	}
+	
+	@Test
+	public void testDeleteTwo() {
+		final String choiceTwo = "2", choiceThree = "3";
+		final Long id = 1l;
+		
+		Mockito.when(utils.getString()).thenReturn(choiceTwo, choiceThree);
+		Mockito.when(utils.getLong()).thenReturn(id);
+		Mockito.when(dao.delete(id)).thenReturn(1);
+		
+		assertEquals(1, controller.delete());
+		
+		Mockito.verify(utils, Mockito.times(2)).getString();
+		Mockito.verify(utils, Mockito.times(1)).getLong();
+		Mockito.verify(dao, Mockito.times(1)).delete(id);
+	}
+	
+	
+	/*
+	 * This final test is testing the return if the user is to
+	 * delete an item from an order and then remove an order entirely
+	 * 
+	 */
+	@Test
+	public void testDeleteThree() {
+		final String  choiceOne = "1", choiceTwo = "2", choiceThree = "3";
+		final Long id = 1l;
+		
+		
+		Mockito.when(utils.getString()).thenReturn(choiceOne, choiceTwo, choiceThree);
+		Mockito.when(utils.getLong()).thenReturn(id, id, id);
+		Mockito.when(dao.removeItem(id, id)).thenReturn(1);
+		Mockito.when(dao.delete(id)).thenReturn(1);
+		
+		assertEquals(2, controller.delete());
+		
+		Mockito.verify(utils, Mockito.times(3)).getString();
+		Mockito.verify(utils, Mockito.times(3)).getLong();
+		Mockito.verify(dao, Mockito.times(1)).delete(id);
+		Mockito.verify(dao, Mockito.times(1)).removeItem(id, id);
+	}
+	
 }
