@@ -1,7 +1,8 @@
 /bin/
 /target/
-/*.iml
-/*.idea
-/*.project
+/*.iml/
+/*.idea/
+/*.project/
 /*.settings/
-/*.classpath
+/*.classpath/
+
