@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-.settings/
-target/
-bin/
-.*
-!.gitignore
-*.log
-=======
 /bin/
 /target/
-/*.iml/
-/*.idea/
-/*.project/
+/*.iml
+/*.idea
+/*.project
 /*.settings/
-/*.classpath/
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
+/*.classpath
 
