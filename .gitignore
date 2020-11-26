@@ -5,12 +5,4 @@ bin/
 .*
 !.gitignore
 *.log
-=======
-/bin/
-/target/
-/*.iml
-/*.idea
-/*.project
-/*.settings/
-/*.classpath/
->>>>>>> d2b766bd1ae60e807ee84bbb5aa6161d0c7e329e
+
