@@ -27,7 +27,7 @@ JDK Version 14.0.2" YYYY-MM--DD
 
 1. Git Bash into your target folder
 
-2. Git Clone https://github.com/MylesBrathQA/QAProjectOne_IMS.git
+2. Git Cclone https://github.com/MylesBrathQA/QAProjectOne_IMS.git
 
 ```
 git clone https://github.com/MylesBrathQA/QAProjectOne_IMS.git
@@ -59,7 +59,7 @@ DB_URL = jdbc:mysql://localhost.3306/ims
 9. Type Customer, Read for output of current customers in Database (Can be changed by changing src/main/resources/sql-data.sql)
 
 <p align="center">
-	<img width="460" height="300" src="./Documentation/ExpectedOutcome.png">
+	<img width="600" height="300" src="./Documentation/ExpectedOutcome.png">
 </p>
 
 ### Running Application
@@ -82,7 +82,7 @@ git Clone https://github.com/MylesBrathQA/QAProjectOne_IMS.git
 java -jar IMS.jar
 ```
 <p align="center">
-  <img width="460" height="300" src="./Documentation/RunApp.png">
+  <img width="600" height="300" src="./Documentation/RunApp.png">
 </p>
 
 
