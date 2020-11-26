@@ -19,15 +19,34 @@ public class DBUtils {
 
 	private final String DB_PASS;
 
+<<<<<<< HEAD
 	private final String DB_URL = "jdbc:mysql://localhost:3306/ims";
+=======
+	private final String DB_URL;
+>>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 
 	private DBUtils(String username, String password) {
 		this.DB_USER = username;
 		this.DB_PASS = password;
+<<<<<<< HEAD
+=======
+		this.DB_URL = "jdbc:mysql://35.234.147.106/ims?db_name&serverTimezone=UTC";
+		init();
+	}
+	
+	private DBUtils(String username, String password, String test) {
+		this.DB_USER = username;
+		this.DB_PASS = password;
+		this.DB_URL = "jdbc:mysql://35.234.147.106/"+test+"?db_name&serverTimezone=UTC";
+>>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 
 		init();
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 	public int init() {
 		return this.init("src/main/resources/sql-schema.sql", "src/main/resources/sql-data.sql");
 	}
@@ -72,6 +91,14 @@ public class DBUtils {
 		instance = new DBUtils(username, password);
 		return instance;
 	}
+<<<<<<< HEAD
+=======
+	
+	public static DBUtils connect(String username, String password, String test) {
+		instance = new DBUtils(username, password, test);
+		return instance;
+	}
+>>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 
 	public static DBUtils getInstance() {
 		if (instance == null) {
@@ -79,5 +106,9 @@ public class DBUtils {
 		}
 		return instance;
 	}
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 }

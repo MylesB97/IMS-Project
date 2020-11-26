@@ -21,22 +21,29 @@ public class Customer {
 		return id;
 	}
 
+<<<<<<< HEAD
 	public void setId(Long id) {
 		this.id = id;
 	}
 
+=======
+>>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 	public String getFirstName() {
 		return firstName;
 	}
 
+<<<<<<< HEAD
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
+=======
+>>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 	public String getSurname() {
 		return surname;
 	}
 
+<<<<<<< HEAD
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
@@ -44,6 +51,12 @@ public class Customer {
 	@Override
 	public String toString() {
 		return "id:" + id + " first name:" + firstName + " surname:" + surname;
+=======
+
+	@Override
+	public String toString() {
+		return "ID:" + id + " | First Name: " + firstName + " | Surname: " + surname + " |";
+>>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 	}
 
 	@Override
