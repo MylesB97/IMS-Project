@@ -4,11 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.qa.ims</groupId>
 	<artifactId>ims</artifactId>
-<<<<<<< HEAD
-	<version>0.0.1</version>
-=======
 	<version>1.0.0</version>
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
+
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
