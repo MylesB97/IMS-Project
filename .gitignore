@@ -1,6 +1,5 @@
 .settings/
 target/
-bin/
 .*
 !.gitignore
 *.log
