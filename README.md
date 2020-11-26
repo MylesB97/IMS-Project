@@ -1,5 +1,5 @@
 Test Coverage: 90.85%
-# Project Title
+# Information Management System
 
 This is an Information Management System which is designed to Online Store Database containing customer information, item information and an orders table housing the orders customers make. The user of the application is able to assign orders to customers and add items to orders as well as remove or edit information about a customer item or orders.
 
