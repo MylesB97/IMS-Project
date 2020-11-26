@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Coverage: 34%
 # Project Title
 
@@ -8,13 +8,11 @@ Test Coverage: 90.85%
 # Project Title
 
 This is an Information Management System which is designed to Online Store Database containing customer information, item information and an orders table housing the orders customers make. The user of the application is able to assign orders to customers and add items to orders as well as remove or edit information about a customer item or orders.
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-<<<<<<< HEAD
 ### Prerequisites
 
 What things you need to install the software and how to install them
@@ -36,30 +34,11 @@ What things you need to install the software and how to install them
 ```
 java -version
 JDK Version 14.0.2" YYYY-MM--DD
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
+
 ```
 
 ### Installing
 
-<<<<<<< HEAD
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-=======
 1. Git Bash into your target folder
 
 2. Git Clone https://github.com/MylesBrathQA/QAProjectOne_IMS.git
@@ -94,7 +73,7 @@ DB_URL = jdbc:mysql://localhost.3306/ims
 9. Type Customer, Read for output of current customers in Database (Can be changed by changing src/main/resources/sql-data.sql)
 
 <p align="center">
-  <img width="460" height="300" src="./Documentation/ExpectedOutcome.png">
+	<img width="460" height="300" src="./Documentation/ExpectedOutcome.png">
 </p>
 
 ### Running Application
@@ -122,34 +101,11 @@ java -jar IMS.jar
 
 
 ## Test
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 
 Explain how to run the automated tests for this system. Break down into which tests and what they do
 
 ### Unit Tests 
 
-<<<<<<< HEAD
-Explain what these tests test, why and how to run them
-
-```
-Give an example
-```
-
-### Integration Tests 
-Explain what these tests test, why and how to run them
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-=======
 The Unit Test are split into two sections
 1. DAO Test (Database Accessor Object Test)
 2. Controller Test
@@ -197,9 +153,7 @@ The Controller acts as the guide for the user allowing them to feed information 
 The test makes use of Mockito to mimic what the DAO would return when it is called and also mimics a users input to see if the code would respond as necessary thus the test code should only be change if the developer makes changes to how the controller works
 
 
-1. Run as JUnit Test
-
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
+1. Run Coverage as JUnit Test
 
 ## Deployment
 
@@ -216,10 +170,7 @@ We use [SemVer](http://semver.org/) for versioning.
 ## Authors
 
 * **Chris Perrins** - *Initial work* - [christophperrins](https://github.com/christophperrins)
-<<<<<<< HEAD
-=======
 * **Myles Brathwaite** - *Version 1 of working IMS System* [MylesBrathwaite](https://github.com/MylesBrathQA)
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 
 ## License
 
@@ -229,12 +180,6 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-<<<<<<< HEAD
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-=======
 * Piers Barber for the Price calculation method for Orders
 * QA Consulting Academy
 
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
