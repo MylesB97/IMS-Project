@@ -21,11 +21,7 @@ public class CustomerDAO implements Dao<Customer> {
 	public Customer modelFromResultSet(ResultSet resultSet) throws SQLException {
 		Long id = resultSet.getLong("id");
 		String firstName = resultSet.getString("first_name");
-<<<<<<< HEAD
-		String surname = resultSet.getString("surname");
-=======
 		String surname = resultSet.getString("last_name");
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 		return new Customer(id, firstName, surname);
 	}
 
@@ -73,11 +69,7 @@ public class CustomerDAO implements Dao<Customer> {
 	public Customer create(Customer customer) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				Statement statement = connection.createStatement();) {
-<<<<<<< HEAD
-			statement.executeUpdate("INSERT INTO customers(first_name, surname) values('" + customer.getFirstName()
-=======
 			statement.executeUpdate("INSERT INTO customers(first_name, last_name) values('" + customer.getFirstName()
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 					+ "','" + customer.getSurname() + "')");
 			return readLatest();
 		} catch (Exception e) {
@@ -111,11 +103,7 @@ public class CustomerDAO implements Dao<Customer> {
 	public Customer update(Customer customer) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				Statement statement = connection.createStatement();) {
-<<<<<<< HEAD
-			statement.executeUpdate("update customers set first_name ='" + customer.getFirstName() + "', surname ='"
-=======
 			statement.executeUpdate("update customers set first_name ='" + customer.getFirstName() + "', last_name ='"
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 					+ customer.getSurname() + "' where id =" + customer.getId());
 			return readCustomer(customer.getId());
 		} catch (Exception e) {

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-INSERT INTO `ims`.`customers` (`first_name`, `surname`) VALUES ('jordan', 'harrison');
-=======
+
 INSERT INTO `testims`.`customers` (`first_name`, `last_name`) VALUES ('jordan', 'harrison');
 INSERT INTO `testims`.`customers` (`first_name`, `last_name`) VALUES ('john', 'doe');
 INSERT INTO `testims`.`customers` (`first_name`, `last_name`) VALUES ('jane', 'doe');
@@ -15,4 +13,4 @@ INSERT INTO `testims`.`items` (`name`, `price`) VALUES ('PlayStation 5', 459);
 INSERT INTO `testims`.`orders`(`customer_id`) VALUES(1);
 
 INSERT INTO `testims`.`order_line`(`order_id`, `item_id`) VALUES(1,2);
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
+

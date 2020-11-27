@@ -48,11 +48,7 @@ public class CustomerController implements CrudController<Customer> {
 		LOGGER.info("Please enter a surname");
 		String surname = utils.getString();
 		Customer customer = customerDAO.create(new Customer(firstName, surname));
-<<<<<<< HEAD
-		LOGGER.info("Customer created");
-=======
 		LOGGER.info("Customer created \n\n");
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 		return customer;
 	}
 
@@ -68,11 +64,7 @@ public class CustomerController implements CrudController<Customer> {
 		LOGGER.info("Please enter a surname");
 		String surname = utils.getString();
 		Customer customer = customerDAO.update(new Customer(id, firstName, surname));
-<<<<<<< HEAD
-		LOGGER.info("Customer Updated");
-=======
 		LOGGER.info("Customer Updated\n\n");
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 		return customer;
 	}
 
@@ -83,11 +75,7 @@ public class CustomerController implements CrudController<Customer> {
 	 */
 	@Override
 	public int delete() {
-<<<<<<< HEAD
-		LOGGER.info("Please enter the id of the customer you would like to delete");
-=======
 		LOGGER.info("Please enter the id of the customer you would like to delete\n\n");
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
 		Long id = utils.getLong();
 		return customerDAO.delete(id);
 	}

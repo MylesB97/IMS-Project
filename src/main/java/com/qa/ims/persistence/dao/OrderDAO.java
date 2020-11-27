@@ -141,6 +141,7 @@ public class OrderDAO implements Dao<Order> {
 	 */
 	@Override
 	public int delete(long id) {
+		deleteOrderLine(id);
 		String query = String.format("DELETE FROM orders where id='%d';", id);
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				Statement statement = connection.createStatement();) {
@@ -149,15 +150,19 @@ public class OrderDAO implements Dao<Order> {
 			LOGGER.debug(e);
 			LOGGER.error(e.getMessage());
 		}
-		String queryTwo = String.format("DELETE FROM order_line WHERE order_id='%d';", id);
-		try (Connection connection = DBUtils.getInstance().getConnection();
-				Statement statement = connection.createStatement();) {
-			return statement.executeUpdate(queryTwo);
-		} catch (Exception e) {
-			LOGGER.debug(e);
-			LOGGER.error(e.getMessage());
-		}
 		return 0;
+	}
+	
+	public int deleteOrderLine(long id) {
+	String queryTwo = String.format("DELETE FROM order_line WHERE order_id='%d';", id);
+	try (Connection connection = DBUtils.getInstance().getConnection();
+			Statement statement = connection.createStatement();) {
+		return statement.executeUpdate(queryTwo);
+	} catch (Exception e) {
+		LOGGER.debug(e);
+		LOGGER.error(e.getMessage());
+	}
+	return 0;
 	}
 	
 	public int removeItem(long orderID, long itemID) {

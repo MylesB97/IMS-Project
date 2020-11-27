@@ -2,13 +2,6 @@ drop schema ims;
 CREATE SCHEMA IF NOT EXISTS `ims`;
 USE `ims` ;
 CREATE TABLE IF NOT EXISTS `ims`.`customers` (
-<<<<<<< HEAD
-    `id` INT(11) NOT NULL AUTO_INCREMENT,
-    `first_name` VARCHAR(40) NULL DEFAULT NULL,
-    `surname` VARCHAR(40) NULL DEFAULT NULL,
-    PRIMARY KEY (`id`)
-);
-=======
     `id` smallint(5) NOT NULL AUTO_INCREMENT,
     `first_name` VARCHAR(40) NULL DEFAULT NULL,
     `last_name` VARCHAR(40) NULL DEFAULT NULL,
@@ -37,5 +30,3 @@ CREATE TABLE IF NOT EXISTS `ims`.`order_line` (
     CONSTRAINT `fk_items_id` FOREIGN KEY(`item_id`) REFERENCES `ims`.`items`(`id`),
     CONSTRAINT `fk_order_id` FOREIGN KEY(`order_id`) REFERENCES `ims`.`orders`(`id`)
     );
-
->>>>>>> 81d2584424cbeb328bae08b88e51a30db0313198
